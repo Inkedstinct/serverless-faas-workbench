@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul

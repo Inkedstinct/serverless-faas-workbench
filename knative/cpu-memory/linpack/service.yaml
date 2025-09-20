@@ -7,12 +7,5 @@ spec:
   template:
     spec:
       containers:
-      - name: linpack
-        image: docker.io/andersonandrei/functionbench-knative:linpack
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M 
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack

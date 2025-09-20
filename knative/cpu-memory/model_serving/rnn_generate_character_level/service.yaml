@@ -1,18 +1,11 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: rnngenerate
+  name: rnn_generate_character_level
   namespace: knative-functions
 spec:
   template:
     spec:
       containers:
-      - name: rnngenerate
-        image: docker.io/andersonandrei/functionbench-knative:rnngenerate
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M               
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate

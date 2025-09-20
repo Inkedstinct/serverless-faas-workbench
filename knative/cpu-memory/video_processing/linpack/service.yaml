@@ -1,0 +1,996 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: video_processing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: videoprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:videoprocessing
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: videoprocessing-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: videoprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:videoprocessing
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: videoprocessing-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: videoprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:videoprocessing
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: image_processing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ml_video_face_detection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnn_generate_character_level
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: model_training
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: float_operation
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: linpack
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: linpack
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:linpack
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chameleon
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: imageprocessing
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: imageprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:imageprocessing
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: facedetection
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: rnngenerate
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: rnngenerate
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:rnngenerate
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: modeltraining
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: videoprocessing-warm
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: videoprocessing
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:videoprocessing
+          imagePullPolicy: Always
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: pyaes
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: pyaes
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:pyaes
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: matmul-cold
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul
+          imagePullPolicy: Always

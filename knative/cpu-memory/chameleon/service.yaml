@@ -7,12 +7,5 @@ spec:
   template:
     spec:
       containers:
-      - name: chameleon
-        image: docker.io/andersonandrei/functionbench-knative:chameleon
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M 
+        - name: chameleon
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:chameleon

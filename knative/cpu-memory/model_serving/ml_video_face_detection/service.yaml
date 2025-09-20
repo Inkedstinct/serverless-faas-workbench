@@ -1,18 +1,11 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: facedetection
+  name: ml_video_face_detection
   namespace: knative-functions
 spec:
   template:
     spec:
       containers:
-      - name: facedetection
-        image: docker.io/andersonandrei/functionbench-knative:facedetection
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M               
+        - name: facedetection
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:facedetection

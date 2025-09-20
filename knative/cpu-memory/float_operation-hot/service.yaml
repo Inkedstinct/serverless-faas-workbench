@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: floatoperation-hot
+  namespace: knative-functions
+spec:
+  template:
+    spec:
+      containers:
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation

@@ -7,12 +7,5 @@ spec:
   template:
     spec:
       containers:
-      - name: matmul
-        image: docker.io/andersonandrei/functionbench-knative:matmul
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M 
+        - name: matmul
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:matmul

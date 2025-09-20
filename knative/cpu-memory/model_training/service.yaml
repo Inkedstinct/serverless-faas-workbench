@@ -1,18 +1,11 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: modeltraining
+  name: model_training
   namespace: knative-functions
 spec:
   template:
     spec:
       containers:
-      - name: modeltraining
-        image: docker.io/andersonandrei/functionbench-knative:modeltraining
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M
+        - name: modeltraining
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:modeltraining

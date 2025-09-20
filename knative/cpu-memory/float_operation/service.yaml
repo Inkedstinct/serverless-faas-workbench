@@ -1,18 +1,11 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: floatoperation
+  name: float_operation
   namespace: knative-functions
 spec:
   template:
     spec:
       containers:
-      - name: floatoperation
-        image: docker.io/andersonandrei/functionbench-knative:floatoperation
-        resources:  
-          requests:
-            cpu: 1
-            memory: 1024M
-          limits:
-            cpu: 1
-            memory: 1024M 
+        - name: floatoperation
+          image: registry.gitlab.inria.fr/naleblon/knative-functions/functionbench-knative:floatoperation
